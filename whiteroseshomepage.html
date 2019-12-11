@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="CS/whiteroseshome.css"> 
+
+    <link rel="stylesheet" href="https://use.typekit.net/jzn2jnt.css">
+
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+}
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+}
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+    function myFunction() {
+        window.print();
+}
+</script>
+
+</head>
+
+<body>
+    <div class="background">
+        <img src="Images/background.jpg">
+    </div>
+    <!--navbar-->
+        <div class="wholepage">
+        <nav>
+        <ul>
+            <li>
+                <a href="#first">Home</a>
+            </li>
+            <li>
+                <a href="#second">Pamphlet Upload</a>
+            </li>
+            <li>
+                <a href="#third">Ideas Upload</a>
+            </li>
+            <li>
+                <a href="#forth">Pamphlet Creator</a>
+            </li>
+        </ul>    
+    </nav>
+            <!--firstpage-->
+    <div class="main" id="first">
+        <div class="title">
+            <img src="Images/thewhiterosemain.png" width="500px" alt="white rose title">
+        </div>
+    </div>
+    
+    <div class="rightside">
+        <div class="openingP">
+                <spread class="quote">
+                    Nothing is so unworthy of a civilized nation as allowing itself to be “governed” without opposition... 
+            <br>
+                    It is certain that today every honest German is ashamed of his government
+                </spread>
+<br><br>
+               We are a German based political movement fighting against the powers of corrupt Nazi Germany. Our work is done in complete anonymity, creating and distributing informational fliers in the dead of night.By spreading information we hope to change peoples minds.
+            <br><br>
+                We used to be members of the Nazi Youth until we witnessed Hitlers Goons attacking good, hard-working, German Citizens. This lead us to realize that our minds had been washed by the lack of information. That is when we started The White Roses. 
+            <br><br>
+                If you would like to help and join the fight for Freedom, please upload your own content or print and distribute our fliers. Eventually through hard work we believe we can change the minds of the German People.
+            </p>
+            </div>
+        </div>
+                 <!--second page-->
+     
+            <div class="main" id="second">
+<form action="upload.php" method="post" enctype="multipart/form-data" >
+    <h1>HELP OUT! </h1>
+    <h4>Print Fliers &amp; Upload</h4>
+    <div class="rightside">
+    <h2>UPLOAD DESIGNS</h2><input type="file" name="fileToUpload" id="fileToUpload">
+    <br> 
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+        <br>
+<h2>BROWSE OTHERS </h2>
+         </div>
+         </div>
+
+  <div class="gallery">
+      
+        <figure class="gallery__item gallery__item--3"> 
+            <img src="Images/phampletpig.jpg" alt="hitler is a pig foldable phamplet" class="gallery__img" height="280px">
+        
+        <button onclick="myFunction()">Print</button>
+        </figure> 
+  
+        
+      <figure class="gallery__item gallery__item--2"> 
+            <img src="Images/hitlermaneater.jpg" alt="hitler is a man eater" class="gallery__img" height="280px">
+      <button onclick="myFunction()">Print</button>
+      </figure>
+         <figure class="gallery__item gallery__item--3"> 
+            <img src="Images/hitlerchicken" alt="hitler is a chicken" class="gallery__img" height="280px">
+      <button onclick="myFunction()">Print</button>
+      </figure>
+           <figure class="gallery__item gallery__item--2"> 
+            <img src="Images/nazi-party-anti-semitic-poster.jpg" alt="nazi's are bad, german poster" class="gallery__img" height="280px">
+      <button onclick="myFunction()">Print</button>
+      </figure>
+                </div>
+         <div class="rightside">  
+             
+        <h2>BROWSE OUR DESIGNS</h2>
+                </div>
+                <div class="gallerya">
+        
+        <figure class="grid-item gallery__item--1"> 
+            <img src="Images/samanthapickettsketcheswebsite3.gif" alt="" class="gallery__img" width="auto">
+            <button onclick="myFunction()">Print</button>
+            <figure class="gallery__item gallery__item--4"> 
+            <img src="Images/vpn.gif" alt="foldable pamphlet, two per page, anti-nazi" class="gallery__img" height="280px">
+            <button onclick="myFunction()">Print</button>
+        </figure>
+             <figure class="gallery__item gallery__item--5">
+            <img src="Images/hitlerplayingcard.gif" alt="hitler playing card, hide in the deck" class="gallery__img" height="280px">
+            <button onclick="myFunction()">Print</button>
+        </figure>
+                    </figure>
+  
+       
+ 
+                </div>
+
+    </div>
+
+</form>
+                
+            </div>
+             <!--third page-->
+  <div class="main" id="third">
+           <body>
+<div class="wholepage">
+<h1>IDEA ???</h1>
+    <h4>Send Us Your Ideas</h4>
+    <div class="rightside">
+<p>If you lack the skills or time to design a flier, send us the information here. </p>
+
+<form action="/action_page.php">
+<h2>SUM IT UP</h2>
+<input type="text" name="SUM IT UP IN A HEADLINE" value="">
+<br>
+<h2>WRITE HOW YOU FEEL</h2>
+<textarea rows="15" cols="125">
+</textarea>
+<br><br>
+
+<button>submit</button>
+</div>
+            </div>
+                 
+   <div class="wholepage">           
+<h1>CRE<br>ATE</h1>
+<h4>Create Your Own</h4>              
+<div class="maker" id="forth">   
+<p><strong>Drag &amp; drop</strong> the elements around the page, once you're happy with your design, save it, upload it, &amp; print/distribute as many copies as you can!</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+     <img src="Images/whiterosesname.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+    <img src="Images/legislationtitle.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+     <img src="Images/vpn.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+    <img src="Images/pullquoteeveryhonestgerman.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height=""> 
+     <img src="Images/bodycopy.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+     <img src="Images/hitlerplayingcard.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+     <img src="Images/legislationquote.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="" height="">
+     
+     <img src="Images/blacktears.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="130" height="">
+         <img src="Images/reddiamonds.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="130" height="">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+</div>
+</div>
+               </div>
+               
+               
+              
+
+
+</body>
+</html>
+
