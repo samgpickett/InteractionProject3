@@ -10,6 +10,7 @@ form {
     position: fixed;
     background: 100%;
     z-index: -1;
+    opacity: 60%;
 }   
 .wholepage {
         max-width: 1200px;
